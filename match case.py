@@ -1,6 +1,5 @@
 lista_ventas=[]
 suma=0
-contador= 0
 numero_datos=0
 while True:
     print("MENÚ DE OPCIONES")
@@ -8,7 +7,7 @@ while True:
     print("2.MOstrar ventas ingresadas")
     print("3.Calcular la venta mas alta y la mas baja")
     print("4.Calcular promedio de ventas")
-    print("5.Contar cuantos días superaron los Q.100")
+    print("5.Contar cuantos días superaron los Q.1000")
     print ("6.Clasificar cada venta (alta/media(baja):")
     print("7.Salir")
     opcion= input("Ingrese una opcion:")
@@ -55,7 +54,8 @@ while True:
                 print("No hay ventas ingresadas para calcular promedio")
 
         case "5":
-            print("CUANTOS DÍAS SUPERARON LOS 100")
+            print("CUANTOS DÍAS SUPERARON LOS 1000")
+            contador = 0
             for ventas in lista_ventas:
                 if ventas > 1000:
                     contador +=1
@@ -75,6 +75,7 @@ while True:
 
         case "7":
             print("Saliendo del programa...")
+            break
 
 
         case _:
