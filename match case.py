@@ -15,19 +15,20 @@ while True:
     match opcion :
         case "1":
             cantidad_datos = int(input("Cuantos datos desea agregar?:"))
-            if cantidad_datos < 0:
+            if cantidad_datos <= 0:
                 print("Dato no valido, no pude ser negativo")
             else:
                 numero_datos += cantidad_datos
-                while True:
-                    for i in range(cantidad_datos):
-                        valor=int(input("Ingrese valor de venta que desea agregar:"))
+
+                for i in range(cantidad_datos):
+                    while True:
+                        valor=int(input(f"Ingrese valor de venta  dia {i+1} que desea agregar:"))
                         if valor < 0:
                             print("CDato no valido, debe ser un entero positivo.")
                         else:
                             lista_ventas.append(valor)
                             suma += valor
-                    break
+                            break
         case "2":
             for mostrar in lista_ventas:
                 print(f"VENTAS INGRESADA: {mostrar}")
