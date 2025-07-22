@@ -1,7 +1,7 @@
 lista_ventas=[]
 suma=0
 contador= 0
-
+numero_datos=0
 while True:
     print("MENÚ DE OPCIONES")
     print("1.Ingresar lista de ventas")
@@ -19,14 +19,15 @@ while True:
             if cantidad_datos < 0:
                 print("Dato no valido, no pude ser negativo")
             else:
+                numero_datos += cantidad_datos
                 while True:
                     for i in range(cantidad_datos):
-                        dato=int(input("Ingrese dato que desea agregar:"))
-                        if dato < 0:
+                        valor=int(input("Ingrese valor que desea agregar:"))
+                        if valor < 0:
                             print("CDato no valido, debe ser un entero positivo.")
                         else:
-                            lista_ventas.append(dato)
-                            suma += dato
+                            lista_ventas.append(valor)
+                            suma += valor
                     break
         case "2":
             for mostrar in lista_ventas:
@@ -47,7 +48,7 @@ while True:
 
         case "4":
             print("PROMEDIO DE VENTAS")
-            promedio= (suma /cantidad_datos)
+            promedio= (suma /numero_datos)
             print(f"El promedio de ventas es de:{promedio}")
 
         case "5":
