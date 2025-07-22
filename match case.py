@@ -7,9 +7,8 @@ while True:
     print("3.Calcular la venta mas alta y la mas baja")
     print("4.Calcular promedio de ventas")
     print("5.Contar cuantos días superaron los Q.100")
-    print("6.Buscar si una venta especifica existe en una lista")
-    print ("7.Clasificar cada venta (alta/media(baja):")
-    print("8.Salir")
+    print ("6.Clasificar cada venta (alta/media(baja):")
+    print("7.Salir")
     opcion= input("Ingrese una opcion:")
 
     match opcion :
@@ -32,26 +31,32 @@ while True:
                 print(f"VENTAS INGRESADA: {mostrar}")
         case "3":
             print("CALCULO DE VENTAS ALTAS Y BAJAS")
+            if lista_ventas:
+                maximo_ventas=lista_ventas[0]
+                minimo_ventas=lista_ventas[0]
+                for venta in lista_ventas:
+                    if venta > maximo_ventas:
+                        maximo_ventas= venta
+                    elif venta < minimo_ventas:
+                        minimo_ventas = venta
+                print(f"La venta mas alta es:{maximo_ventas}")
+                print(f"La venta mas bja es:{minimo_ventas}")
+
 
         case "4":
             print("PROMEDIO DE VENTAS")
             promedio= (suma /cantidad_datos)
             print(f"El promedio de ventas es de:{promedio}")
+
         case "5":
             print("CUANTOS DÍAS SUPERARON LOS 100")
+
         case "6":
-            venta= int(input("Ingrese venta a buscar:"))
-            if venta in lista_ventas:
-                print("venta encontrada")
+            print("CLASIFICACIÓN DE VENTAS")
 
-            else:
-                print("Venta no encontrada...")
         case "7":
-            print("CLASIFICACIÓN VENTAS:")
+            print("Saliendo del programa...")
 
-
-        case "8":
-            print("Saliendo del sistema...")
 
         case _:
             print("No existe opcion")
