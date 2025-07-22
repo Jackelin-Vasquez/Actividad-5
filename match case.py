@@ -29,6 +29,7 @@ while True:
         case "3":
             print("CALCULO DE VENTAS ALTAS Y BAJAS")
 
+
         case "4":
             print("")
         case "5":
@@ -40,8 +41,11 @@ while True:
             else:
                 print("Venta no encontrada...")
         case "7":
+            print("CLASIFICACIÓN VENTAS:")
+
 
         case "8":
+            print("Saliendo del sistema...")
 
         case _:
             print("No existe opcion")
