@@ -22,7 +22,7 @@ while True:
                 numero_datos += cantidad_datos
                 while True:
                     for i in range(cantidad_datos):
-                        valor=int(input("Ingrese valor que desea agregar:"))
+                        valor=int(input("Ingrese valor de venta que desea agregar:"))
                         if valor < 0:
                             print("CDato no valido, debe ser un entero positivo.")
                         else:
@@ -48,15 +48,18 @@ while True:
 
         case "4":
             print("PROMEDIO DE VENTAS")
-            promedio= (suma /numero_datos)
-            print(f"El promedio de ventas es de:{promedio}")
+            if numero_datos > 0:
+                promedio= (suma /numero_datos)
+                print(f"El promedio de ventas es de:{promedio}")
+            else:
+                print("No hay ventas ingresadas para calcular promedio")
 
         case "5":
             print("CUANTOS DÍAS SUPERARON LOS 100")
             for ventas in lista_ventas:
-                if ventas > 100:
+                if ventas > 1000:
                     contador +=1
-            print(f"Hay {contador} día/s que superaron los Q100")
+            print(f"Hay {contador} día/s que superaron los Q1000")
 
 
         case "6":
