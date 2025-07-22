@@ -60,6 +60,14 @@ while True:
 
         case "6":
             print("CLASIFICACIÓN DE VENTAS")
+            for ventas_comp in lista_ventas:
+                if ventas_comp > 1000:
+                    print(f"{ventas_comp} es venta alta")
+                elif ventas_comp >=500 and ventas_comp <=1000:
+                    print(f"{ventas_comp} es una venta media")
+                else:
+                    print(f"{ventas_comp} es un venta baja")
+
 
         case "7":
             print("Saliendo del programa...")
