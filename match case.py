@@ -1,5 +1,7 @@
 lista_ventas=[]
 suma=0
+contador= 0
+
 while True:
     print("MENÚ DE OPCIONES")
     print("1.Ingresar lista de ventas")
@@ -50,6 +52,11 @@ while True:
 
         case "5":
             print("CUANTOS DÍAS SUPERARON LOS 100")
+            for ventas in lista_ventas:
+                if ventas > 100:
+                    contador +=1
+            print(f"Hay {contador} día/s que superaron los Q100")
+
 
         case "6":
             print("CLASIFICACIÓN DE VENTAS")
