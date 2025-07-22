@@ -33,7 +33,7 @@ while True:
         case "4":
             print("")
         case "5":
-            print("Salir")
+            print("CUANTOS DÍAS SUPERARON LOS 100")
         case "6":
             venta= int(input("Ingrese venta a buscar:"))
             if venta in lista_ventas:
